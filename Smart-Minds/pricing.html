@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Smart Minds</title>
+  <meta name="description" content="Simple, affordable pricing at R150 per month per subject. Invest in your future for less than the cost of a textbook.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="top">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" onclick="scrollToTop(event)">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <span class="logo-text">Smart Minds</span>
+      </a>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html" onclick="scrollToTop(event)">Home</a></li>
+          <li><a href="subjects.html" onclick="scrollToTop(event)">Subjects</a></li>
+          <li><a href="pricing.html" class="active" onclick="scrollToTop(event)">Pricing</a></li>
+          <li><a href="live-schedules.html" onclick="scrollToTop(event)">Live Schedules</a></li>
+          <li><a href="quizzes.html" onclick="scrollToTop(event)">Quizzes</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="subscribe-confirmation.html" class="btn btn-primary">Get Started</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="index.html" onclick="scrollToTop(event)">Home</a></li>
+        <li><a href="subjects.html" onclick="scrollToTop(event)">Subjects</a></li>
+        <li><a href="pricing.html" onclick="scrollToTop(event)">Pricing</a></li>
+        <li><a href="live-schedules.html" onclick="scrollToTop(event)">Live Schedules</a></li>
+        <li><a href="quizzes.html" onclick="scrollToTop(event)">Quizzes</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="subscribe-confirmation.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header" style="padding-bottom: 30px;">
+    <div class="container">
+      <h1>Simple, Affordable Pricing</h1>
+      <p>Invest in your future for less than the cost of a textbook.</p>
+    </div>
+  </div>
+
+  <section class="pricing-section">
+    <div class="container">
+      <div class="pricing-card">
+        <h3>Single Subject</h3>
+        <p>Full access to one subject of your choice</p>
+        
+        <div class="price">R150/month</div>
+        <div class="price-period">per subject</div>
+        
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Access to all video lessons</span>
+          </div>
+          <div class="pricing-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Weekly live online lessons</span>
+          </div>
+          <div class="pricing-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Lesson recordings available anytime</span>
+          </div>
+          <div class="pricing-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Progress tracking dashboard</span>
+          </div>
+          <div class="pricing-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>WhatsApp support group access</span>
+          </div>
+        </div>
+        
+        <a href="subscribe-confirmation.html" class="btn btn-primary btn-lg">Subscribe Now</a>
+      </div>
+      
+      <div class="info-banner" style="margin-top: 30px;">
+        <div class="info-banner-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <div class="info-banner-content">
+          <h3>Payment Information</h3>
+          <p>All <strong>banking details</strong> will be pinned in the WhatsApp group chat after you select your subjects. For any payment enquiries or issues, please contact us via the WhatsApp group or email <strong>smartmindstutoring76@gmail.com</strong></p>
+        </div>
+      </div>
+      
+      <p class="pricing-note">
+        Need multiple subjects? Add as many as you need during checkout.<br>
+        Cancel anytime. No long-term contracts.
+      </p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I cancel my subscription anytime?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Yes, absolutely. You can cancel your subscription at any time from your dashboard. Your access will continue until the end of your current billing cycle.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Are the lessons live or recorded?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Both! You get access to our library of pre-recorded lessons covering the entire curriculum, PLUS weekly live interactive lessons where you can ask questions.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I get the banking details and webinar links?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Once you select your subjects and join our WhatsApp group, all banking details and webinar links for live lessons will be pinned in the group chat for easy access.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I access Smart Minds on my phone?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Yes, our platform is fully mobile-optimized. You can watch lessons, take quizzes, and download notes from your smartphone, tablet, or laptop.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do live lessons work?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Live lessons are held weekly according to our schedule. The webinar links will be pinned in the WhatsApp group. All live lessons are also recorded, so you can watch them later if you miss one.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <span class="logo-text">Smart Minds</span>
+          </a>
+          <p>Empowering Grade 12 learners with curriculum-aligned digital education. Master your matric results with us.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="live-schedules.html">Live Lessons</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><strong>Call/WhatsApp:</strong></li>
+            <li><a href="tel:+27816991450">+27 81 699 1450</a></li>
+            <li><strong>Email:</strong></li>
+            <li><a href="mailto:smartmindstutoring76@gmail.com">smartmindstutoring76@gmail.com</a></li>
+            <li><strong>Location:</strong></li>
+            <li>Pretoria, South Africa</li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Smart Minds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

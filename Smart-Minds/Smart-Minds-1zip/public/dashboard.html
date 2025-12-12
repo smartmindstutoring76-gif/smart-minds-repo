@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Smart Minds</title>
+  <meta name="description" content="Your Smart Minds learning dashboard. Access your subjects, live schedules, and lesson recordings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <span class="logo-text">Smart Minds</span>
+      </a>
+      
+      <nav>
+        <ul>
+          <li><a href="#schedules-section">Live Schedules</a></li>
+          <li><a href="#recordings-section">Recordings</a></li>
+          <li><a href="#subjects-section">Subjects</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-buttons">
+        <a href="index.html" onclick="handleLogout()" class="btn btn-outline">Log Out</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#schedules-section">Live Schedules</a></li>
+        <li><a href="#recordings-section">Recordings</a></li>
+        <li><a href="#subjects-section">Subjects</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="index.html" onclick="handleLogout()" class="btn btn-outline">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header dashboard-header">
+    <div class="container">
+      <h1>Welcome to Your Dashboard</h1>
+      <p id="dashboardGreeting">Hello! Ready to learn something new today?</p>
+      <div class="teams-reminder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>All live lessons are conducted via Microsoft Teams. Links are shared in the WhatsApp group.</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="schedules-section" class="dashboard-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <h2>Live Schedules Timetable</h2>
+        <p>Check your upcoming live lessons for the week. All sessions via Microsoft Teams.</p>
+      </div>
+      
+      <div class="schedule-grid full-schedule">
+        <div class="day-card">
+          <div class="day-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            <h3>Monday</h3>
+          </div>
+          <div class="day-content">
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18:00 - 20:00</div>
+              <div class="subjects-tags"><span class="tag">Mathematics</span><span class="tag">Business Studies</span></div>
+            </div>
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>20:00 - 22:00</div>
+              <div class="subjects-tags"><span class="tag">Accounting</span><span class="tag">Life Sciences</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="day-card">
+          <div class="day-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            <h3>Tuesday</h3>
+          </div>
+          <div class="day-content">
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18:00 - 20:00</div>
+              <div class="subjects-tags"><span class="tag">Accounting</span><span class="tag">Geography</span></div>
+            </div>
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>20:00 - 22:00</div>
+              <div class="subjects-tags"><span class="tag">Math Literacy</span><span class="tag">Physical Sciences</span></div>
+            </div>
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>22:00 - 23:00</div>
+              <div class="subjects-tags"><span class="tag">Economics</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="day-card">
+          <div class="day-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            <h3>Wednesday</h3>
+          </div>
+          <div class="day-content">
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18:00 - 20:00</div>
+              <div class="subjects-tags"><span class="tag">Economics</span><span class="tag">Physical Sciences</span></div>
+            </div>
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>20:00 - 22:00</div>
+              <div class="subjects-tags"><span class="tag">Geography</span><span class="tag">Mathematics</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="day-card">
+          <div class="day-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            <h3>Thursday</h3>
+          </div>
+          <div class="day-content">
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18:00 - 20:00</div>
+              <div class="subjects-tags"><span class="tag">Life Sciences</span><span class="tag">Business Studies</span></div>
+            </div>
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>20:00 - 22:00</div>
+              <div class="subjects-tags"><span class="tag">Math Literacy</span><span class="tag">Accounting</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="day-card">
+          <div class="day-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            <h3>Friday</h3>
+          </div>
+          <div class="day-content">
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18:00 - 20:00</div>
+              <div class="subjects-tags"><span class="tag">Physical Sciences</span><span class="tag">Mathematics</span></div>
+            </div>
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>20:00 - 22:00</div>
+              <div class="subjects-tags"><span class="tag">Economics</span><span class="tag">Geography</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="day-card">
+          <div class="day-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            <h3>Saturday</h3>
+          </div>
+          <div class="day-content">
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>09:00 - 12:00</div>
+              <div class="subjects-tags"><span class="tag">Revision Sessions</span></div>
+            </div>
+            <div class="time-slot">
+              <div class="time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14:00 - 17:00</div>
+              <div class="subjects-tags"><span class="tag">Exam Prep</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recordings-section" class="dashboard-section" style="background: var(--muted);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <h2>Live Session Recordings</h2>
+        <p>Access recordings of past live lessons. Recordings will be added after each session.</p>
+      </div>
+      
+      <div class="recordings-folders-grid">
+        <div class="recording-folder">
+          <div class="folder-icon blue"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Physical Sciences</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+        
+        <div class="recording-folder">
+          <div class="folder-icon green"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Mathematics</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+        
+        <div class="recording-folder">
+          <div class="folder-icon green"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Life Sciences</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+        
+        <div class="recording-folder">
+          <div class="folder-icon amber"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Accounting</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+        
+        <div class="recording-folder">
+          <div class="folder-icon blue"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Geography</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+        
+        <div class="recording-folder">
+          <div class="folder-icon purple"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Economics</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+        
+        <div class="recording-folder">
+          <div class="folder-icon purple"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Business Studies</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+        
+        <div class="recording-folder">
+          <div class="folder-icon green"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+          <h4>Mathematical Literacy</h4>
+          <p class="folder-status">No recordings yet</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subjects-section" class="dashboard-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <h2>Your Subjects - Paper 1 & Paper 2 Chapters</h2>
+        <p>Access all your enrolled subjects and learning materials organised by Paper 1 and Paper 2.</p>
+      </div>
+      
+      <div class="subjects-detailed-grid">
+        <div class="subject-detailed-card" id="physical-sciences">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('physical-sciences')">
+            <div class="subject-info">
+              <div class="subject-icon blue"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
+              <div><h3>Physical Sciences</h3><p>Physics and Chemistry</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Physics</h4><ul class="chapter-list"><li>Momentum and Impulse</li><li>Vertical Projectile Motion</li><li>Work, Energy and Power</li><li>Doppler Effect</li><li>Electrostatics</li><li>Electric Circuits</li><li>Electrodynamics</li><li>Photo-electric Effect</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Chemistry</h4><ul class="chapter-list"><li>Organic Chemistry (IUPAC Naming)</li><li>Organic Reactions</li><li>Plastics and Polymers</li><li>Electrochemical Reactions</li><li>The Chemical Industry</li><li>Rate and Extent of Reaction</li><li>Chemical Equilibrium</li><li>Acids and Bases</li></ul></div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="mathematics">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('mathematics')">
+            <div class="subject-info">
+              <div class="subject-icon green"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg></div>
+              <div><h3>Mathematics</h3><p>Algebra, Calculus, Geometry</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Algebra, Functions & Calculus</h4><ul class="chapter-list"><li>Patterns, Sequences and Series</li><li>Functions and Inverses</li><li>Exponential and Logarithmic Functions</li><li>Finance, Growth and Decay</li><li>Differential Calculus (Limits)</li><li>Differential Calculus (Derivatives)</li><li>Differential Calculus (Applications)</li><li>Counting Principles and Probability</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Geometry, Trigonometry & Statistics</h4><ul class="chapter-list"><li>Euclidean Geometry</li><li>Analytical Geometry</li><li>Trigonometry (Compound Angles)</li><li>Trigonometry (Solution of Triangles)</li><li>Trigonometry (2D and 3D Problems)</li><li>Statistics (Regression and Correlation)</li></ul></div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="life-sciences">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('life-sciences')">
+            <div class="subject-info">
+              <div class="subject-icon green"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <div><h3>Life Sciences</h3><p>Biology, Genetics, Anatomy</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Life Processes</h4><ul class="chapter-list"><li>Meiosis</li><li>Reproduction in Vertebrates</li><li>Human Reproduction</li><li>Nervous System</li><li>Endocrine System (Hormones)</li><li>Homeostasis in Humans</li><li>Plant Responses</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Genetics & Evolution</h4><ul class="chapter-list"><li>DNA: The Code of Life</li><li>Genetics and Inheritance</li><li>Human Genetics (Genetic Diseases)</li><li>Evolution by Natural Selection</li><li>Human Evolution</li><li>Speciation</li></ul></div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="accounting">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('accounting')">
+            <div class="subject-info">
+              <div class="subject-icon amber"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+              <div><h3>Accounting</h3><p>Financial Statements</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Financial Reporting</h4><ul class="chapter-list"><li>Companies: Concepts and Unique Entries</li><li>Companies: Final Accounts</li><li>Financial Statements of Companies</li><li>Analysis and Interpretation</li><li>Cash Flow Statement</li><li>Inventory Systems (Perpetual)</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Managerial Accounting</h4><ul class="chapter-list"><li>Manufacturing Concepts</li><li>Production Cost Statement</li><li>Break-even Analysis</li><li>Budgets (Cash Budget)</li><li>Budgets (Projected Income Statement)</li><li>Cost Accounting</li><li>Ethical Behaviour and Internal Control</li></ul></div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="geography">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('geography')">
+            <div class="subject-info">
+              <div class="subject-icon blue"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+              <div><h3>Geography</h3><p>Climatology, Geomorphology</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Theory</h4><ul class="chapter-list"><li>Climate and Weather (Mid-latitude Cyclones)</li><li>Climate and Weather (Tropical Cyclones)</li><li>Climate and Weather (Subtropical Anticyclones)</li><li>Geomorphology (Fluvial Processes)</li><li>Geomorphology (Drainage Basins)</li><li>Africa and Global Development</li><li>Resources and Sustainability</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Mapwork & GIS</h4><ul class="chapter-list"><li>Map Calculations (Distance, Scale, Area)</li><li>Contour Lines and Cross-sections</li><li>Map Interpretation</li><li>Orthophoto Interpretation</li><li>Geographical Information Systems (GIS)</li><li>Synoptic Weather Maps</li></ul></div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="economics">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('economics')">
+            <div class="subject-info">
+              <div class="subject-icon purple"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+              <div><h3>Economics</h3><p>Macro and Micro-economics</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Macro-economics</h4><ul class="chapter-list"><li>Circular Flow (Open Economy)</li><li>Business Cycles</li><li>Public Sector (Fiscal Policy)</li><li>Foreign Exchange Markets</li><li>Balance of Payments</li><li>Protectionism and Free Trade</li><li>Economic Growth and Development</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Micro-economics</h4><ul class="chapter-list"><li>Perfect Markets</li><li>Imperfect Markets (Monopoly)</li><li>Imperfect Markets (Oligopoly)</li><li>Cost, Revenue and Profit</li><li>Market Failures</li><li>Labour Market</li><li>Inequality and Poverty</li></ul></div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="business-studies">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('business-studies')">
+            <div class="subject-info">
+              <div class="subject-icon purple"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <div><h3>Business Studies</h3><p>Operations, Legislation</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Business Environments</h4><ul class="chapter-list"><li>Macro Environment (Impact on Business)</li><li>Market Environment</li><li>Business Sectors</li><li>Contemporary Socio-economic Issues</li><li>Social Responsibility and Ethics</li><li>Legislation (BBBEE, Labour, Consumer Protection)</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Business Ventures</h4><ul class="chapter-list"><li>Business Operations (Quality, Production)</li><li>Human Resources Function</li><li>Leadership and Management</li><li>Investment (Securities and Insurance)</li><li>Presentation and Data Response</li><li>Forms of Ownership</li><li>Team Dynamics and Conflict Management</li></ul></div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="maths-literacy">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('maths-literacy')">
+            <div class="subject-info">
+              <div class="subject-icon green"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/></svg></div>
+              <div><h3>Mathematical Literacy</h3><p>Practical Mathematics</p></div>
+            </div>
+            <div class="expand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section"><h4>Paper 1: Finance, Data Handling & Probability</h4><ul class="chapter-list"><li>Finance (Income, Expenditure, Budgets)</li><li>Finance (Interest, Banking, Taxation)</li><li>Finance (Exchange Rates)</li><li>Data Handling (Collecting and Organising)</li><li>Data Handling (Representing Data)</li><li>Probability and Predictions</li></ul></div>
+            <div class="paper-section"><h4>Paper 2: Measurement, Maps & Space</h4><ul class="chapter-list"><li>Conversions and Time</li><li>Measurement (Length, Mass, Volume)</li><li>Maps, Plans and Other Representations</li><li>Scale and Map Work</li><li>Measurement (Perimeter, Area, Volume)</li><li>Models and Plans</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-support">
+    <div class="container">
+      <div class="support-box">
+        <h3>Need Help?</h3>
+        <p>For any issues, complaints or questions, contact us via:</p>
+        <div class="support-contacts">
+          <a href="https://wa.me/27816991450" class="support-link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>WhatsApp: +27 81 699 1450</a>
+          <a href="mailto:smartmindstutoring76@gmail.com" class="support-link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>smartmindstutoring76@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <span class="logo-text">Smart Minds</span>
+          </a>
+          <p>Empowering Grade 12 learners with curriculum-aligned digital education.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="tel:+27816991450">+27 81 699 1450</a></li>
+            <li><a href="mailto:smartmindstutoring76@gmail.com">smartmindstutoring76@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Smart Minds. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!sessionStorage.getItem('isLoggedIn')) {
+        window.location.href = 'login.html';
+      }
+    });
+  </script>
+</body>
+</html>

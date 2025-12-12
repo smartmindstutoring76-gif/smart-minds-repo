@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Minds - Digital Learning Platform for Matric</title>
+  <meta name="description" content="Comprehensive video lessons and live classes for Matric learners. Master your subjects with South Africa's newest digital learning platform.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Smart Minds Tutoring">
+  <meta property="og:title" content="Smart Minds - Digital Learning Platform for Matric">
+  <meta property="og:description" content="Comprehensive video lessons and live classes for Matric learners.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <div class="admissions-banner">
+    <div class="container">
+      <p>Admissions for 2026 Matriculants and Upgraders are NOW OPEN! <a href="pricing.html">Register Today</a></p>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <span class="logo-text">Smart Minds</span>
+      </a>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="subjects.html">Subjects</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="live-schedules.html">Live Schedules</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="pricing.html" class="btn btn-primary">Get Started</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="live-schedules.html">Live Schedules</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="pricing.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero hero-dark">
+    <div class="hero-bg">
+      <img src="images/hero-bg.png" alt="Educational background">
+    </div>
+    <div class="hero-overlay hero-overlay-dark"></div>
+    
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">Matric Support</div>
+        <h1>Unlock Your <br><span>Full Potential</span></h1>
+        <p>Comprehensive video lessons and live classes for Matric learners. Master your subjects with South Africa's newest digital learning platform.</p>
+        
+        <div class="hero-buttons">
+          <a href="pricing.html" class="btn btn-secondary btn-lg">Get Started Now</a>
+          <a href="subjects.html" class="btn btn-outline-white btn-lg">View Subjects</a>
+        </div>
+        
+        <div class="hero-features">
+          <div class="hero-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>CAPS Aligned</span>
+          </div>
+          <div class="hero-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Expert Teachers</span>
+          </div>
+          <div class="hero-feature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>24/7 Access</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-card" id="liveLesson">
+        <div class="hero-card-header">
+          <div>
+            <p class="hero-card-label" id="currentDateTime">Loading...</p>
+            <h3 class="hero-card-title" id="nextLessonTitle">Next Live Lesson</h3>
+          </div>
+          <div class="hero-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        
+        <div class="lesson-item" id="lesson1">
+          <div class="lesson-icon blue">M</div>
+          <div class="lesson-info">
+            <h4>Maths & Business Studies</h4>
+            <p>Monday, 18:00 - 20:00</p>
+          </div>
+        </div>
+        
+        <div class="lesson-item" id="lesson2">
+          <div class="lesson-icon green">AL</div>
+          <div class="lesson-info">
+            <h4>Accounting & Life Sciences</h4>
+            <p>Monday, 20:00 - 22:00</p>
+          </div>
+        </div>
+        
+        <div class="teams-notice">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>All lessons via Microsoft Teams</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything you need to ace Matric</h2>
+        <p>Smart Minds provides a complete ecosystem for learning, practice, and revision.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+          </div>
+          <h3>Video Lessons</h3>
+          <p>High-quality recorded lessons for every chapter, available 24/7.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Live Classes on Teams</h3>
+          <p>Interactive weekly live sessions with expert teachers via Microsoft Teams.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Lesson Recordings</h3>
+          <p>Missed a live class? Watch the recording anytime you want.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <h3>Progress Tracking</h3>
+          <p>Monitor your learning journey with detailed progress reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose Smart Minds?</h2>
+        <p>Because your success is our mission, and we're in this journey together!</p>
+      </div>
+      
+      <div class="why-choose-grid">
+        <div class="why-choose-card fun-card">
+          <div class="why-choose-icon rocket-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          </div>
+          <h3>We Speak Your Language!</h3>
+          <p>Forget boring textbook talk! Our teachers break down complex topics into bite-sized, easy-to-understand lessons. We explain things the way your friend who "just gets it" would - simple, clear, and with examples that actually make sense. No more confusion!</p>
+        </div>
+        
+        <div class="why-choose-card fun-card">
+          <div class="why-choose-icon party-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+          </div>
+          <h3>Learning Should Be FUN!</h3>
+          <p>Who said studying has to be stressful? Our lessons are engaging, interactive, and designed to keep you interested. We use real-life examples, fun analogies, and interactive sessions that make you actually look forward to learning! Yes, really!</p>
+        </div>
+        
+        <div class="why-choose-card fun-card">
+          <div class="why-choose-icon heart-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>You're Never Alone!</h3>
+          <p>Stuck on a problem at 10pm? No worries! Our WhatsApp community is always buzzing with fellow learners and tutors ready to help. Ask questions, share tips, and celebrate your wins with people who genuinely care about your success. We're family!</p>
+        </div>
+        
+        <div class="why-choose-card fun-card">
+          <div class="why-choose-icon trophy-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          </div>
+          <h3>Results That SPEAK!</h3>
+          <p>We're not just here to teach - we're here to see you succeed and celebrate with you! Our structured approach follows exactly what you'll face in exams. When exam day comes, you'll walk in confident, prepared, and ready to smash those distinctions!</p>
+        </div>
+
+        <div class="why-choose-card fun-card">
+          <div class="why-choose-icon money-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+          </div>
+          <h3>Affordable Excellence!</h3>
+          <p>Quality education shouldn't break the bank! At just R150 per subject per month, we're making top-tier matric support accessible to everyone. Invest in your future without the stress - because every learner deserves a fair chance at success!</p>
+        </div>
+
+        <div class="why-choose-card fun-card">
+          <div class="why-choose-icon clock-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Learn Anytime, Anywhere!</h3>
+          <p>Whether you're a morning person or a night owl, our platform is ready when you are! Access lessons from your phone, tablet, or laptop - at home, on the bus, or even during those boring family gatherings. Your classroom is wherever YOU are!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="curriculum-section">
+    <div class="container">
+      <div class="curriculum-content">
+        <h2>Structured exactly like your curriculum</h2>
+        <p>Don't waste time searching for relevant content. Every subject is divided into Paper 1 and Paper 2, broken down into correct chapters and topics aligned with CAPS.</p>
+        
+        <div class="curriculum-list">
+          <div class="curriculum-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Chapters arranged in exam-board order</span>
+          </div>
+          <div class="curriculum-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Subtopics for deep understanding</span>
+          </div>
+          <div class="curriculum-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Lesson summaries and examples</span>
+          </div>
+          <div class="curriculum-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Worked examples for calculations</span>
+          </div>
+        </div>
+        
+        <a href="subjects.html" class="btn btn-primary btn-lg">Explore Subjects</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="subjects-section">
+    <div class="container">
+      <div class="subjects-header subjects-header-compact">
+        <div>
+          <h2>Top Subjects</h2>
+          <p>Most popular choices among our learners</p>
+        </div>
+        <a href="subjects.html" class="btn btn-outline">View All Subjects</a>
+      </div>
+      
+      <div class="subjects-grid">
+        <a href="subjects.html" class="subject-card">
+          <div class="subject-icon blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+          </div>
+          <h3>Physical Sciences</h3>
+          <p>Physics and Chemistry curriculum aligned with CAPS.</p>
+        </a>
+        
+        <a href="subjects.html" class="subject-card">
+          <div class="subject-icon green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+          </div>
+          <h3>Mathematics</h3>
+          <p>Algebra, Calculus, Geometry and Trigonometry.</p>
+        </a>
+        
+        <a href="subjects.html" class="subject-card">
+          <div class="subject-icon green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Life Sciences</h3>
+          <p>Biology, Genetics, and Human Anatomy.</p>
+        </a>
+        
+        <a href="subjects.html" class="subject-card">
+          <div class="subject-icon amber">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <h3>Accounting</h3>
+          <p>Financial statements, companies and auditing.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-support-section">
+    <div class="container">
+      <div class="support-box">
+        <h2>Need Help or Have Concerns?</h2>
+        <p>For any issues, complaints, or questions, please reach out to us through:</p>
+        <div class="support-options">
+          <div class="support-option">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <div>
+              <h4>WhatsApp Group</h4>
+              <p><a href="tel:+27816991450">+27 81 699 1450</a></p>
+            </div>
+          </div>
+          <div class="support-option">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <h4>Email Us</h4>
+              <p><a href="mailto:smartmindstutoring76@gmail.com">smartmindstutoring76@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <span class="logo-text">Smart Minds</span>
+          </a>
+          <p>Empowering Grade 12 learners with curriculum-aligned digital education. Master your matric results with us.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="live-schedules.html">Live Lessons</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><strong>Call/WhatsApp:</strong></li>
+            <li><a href="tel:+27816991450">+27 81 699 1450</a></li>
+            <li><strong>Email:</strong></li>
+            <li><a href="mailto:smartmindstutoring76@gmail.com">smartmindstutoring76@gmail.com</a></li>
+            <li><strong>Location:</strong></li>
+            <li>Pretoria, South Africa</li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Smart Minds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

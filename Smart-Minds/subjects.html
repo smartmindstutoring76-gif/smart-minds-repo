@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Subjects - Smart Minds</title>
+  <meta name="description" content="Comprehensive Grade 12 curriculum coverage. View all subjects including Physical Sciences, Mathematics, Life Sciences, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <span class="logo-text">Smart Minds</span>
+      </a>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html" onclick="scrollToTop(event)">Home</a></li>
+          <li><a href="subjects.html" class="active" onclick="scrollToTop(event)">Subjects</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="live-schedules.html" onclick="scrollToTop(event)">Live Schedules</a></li>
+          <li><a href="quizzes.html" onclick="scrollToTop(event)">Quizzes</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="subscribe-confirmation.html" class="btn btn-primary">Get Started</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="index.html" onclick="scrollToTop(event)">Home</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="live-schedules.html" onclick="scrollToTop(event)">Live Schedules</a></li>
+          <li><a href="quizzes.html" onclick="scrollToTop(event)">Quizzes</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="subscribe-confirmation.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Our Subjects</h1>
+      <p>Comprehensive Grade 12 curriculum coverage aligned with CAPS. Click on any subject to view detailed chapters.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="subjects-detailed-grid">
+        
+        <div class="subject-detailed-card" id="physical-sciences">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('physical-sciences')">
+            <div class="subject-info">
+              <div class="subject-icon blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+              </div>
+              <div>
+                <h3>Physical Sciences</h3>
+                <p>Physics and Chemistry curriculum aligned with CAPS</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Physics</h4>
+              <ul class="chapter-list">
+                <li>Momentum and Impulse</li>
+                <li>Vertical Projectile Motion</li>
+                <li>Organic Molecules (Functional Groups)</li>
+                <li>Work, Energy and Power</li>
+                <li>Doppler Effect</li>
+                <li>Electrostatics</li>
+                <li>Electric Circuits</li>
+                <li>Electrodynamics</li>
+                <li>Photo-electric Effect</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Chemistry</h4>
+              <ul class="chapter-list">
+                <li>Organic Chemistry (IUPAC Naming)</li>
+                <li>Organic Reactions</li>
+                <li>Plastics and Polymers</li>
+                <li>Electrochemical Reactions</li>
+                <li>The Chemical Industry (Fertilisers)</li>
+                <li>Rate and Extent of Reaction</li>
+                <li>Chemical Equilibrium</li>
+                <li>Acids and Bases</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="mathematics">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('mathematics')">
+            <div class="subject-info">
+              <div class="subject-icon green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+              </div>
+              <div>
+                <h3>Mathematics</h3>
+                <p>Algebra, Calculus, Geometry and Trigonometry</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Algebra, Functions & Calculus</h4>
+              <ul class="chapter-list">
+                <li>Patterns, Sequences and Series</li>
+                <li>Functions and Inverses</li>
+                <li>Exponential and Logarithmic Functions</li>
+                <li>Finance, Growth and Decay</li>
+                <li>Differential Calculus (Limits)</li>
+                <li>Differential Calculus (Derivatives)</li>
+                <li>Differential Calculus (Applications)</li>
+                <li>Counting Principles and Probability</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Geometry, Trigonometry & Statistics</h4>
+              <ul class="chapter-list">
+                <li>Euclidean Geometry</li>
+                <li>Analytical Geometry</li>
+                <li>Trigonometry (Compound Angles)</li>
+                <li>Trigonometry (Solution of Triangles)</li>
+                <li>Trigonometry (2D and 3D Problems)</li>
+                <li>Statistics (Regression and Correlation)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="life-sciences">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('life-sciences')">
+            <div class="subject-info">
+              <div class="subject-icon green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3>Life Sciences</h3>
+                <p>Biology, Genetics, and Human Anatomy</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Life Processes</h4>
+              <ul class="chapter-list">
+                <li>Meiosis</li>
+                <li>Reproduction in Vertebrates</li>
+                <li>Human Reproduction</li>
+                <li>Nervous System</li>
+                <li>Endocrine System (Hormones)</li>
+                <li>Homeostasis in Humans</li>
+                <li>Plant Responses</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Genetics & Evolution</h4>
+              <ul class="chapter-list">
+                <li>DNA: The Code of Life</li>
+                <li>Genetics and Inheritance</li>
+                <li>Human Genetics (Genetic Diseases)</li>
+                <li>Evolution by Natural Selection</li>
+                <li>Human Evolution</li>
+                <li>Speciation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="accounting">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('accounting')">
+            <div class="subject-info">
+              <div class="subject-icon amber">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </div>
+              <div>
+                <h3>Accounting</h3>
+                <p>Financial statements, companies and auditing</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Financial Reporting</h4>
+              <ul class="chapter-list">
+                <li>Companies: Concepts and Unique Entries</li>
+                <li>Companies: Final Accounts</li>
+                <li>Financial Statements of Companies</li>
+                <li>Analysis and Interpretation of Financial Statements</li>
+                <li>Cash Flow Statement</li>
+                <li>Inventory Systems (Perpetual)</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Managerial Accounting</h4>
+              <ul class="chapter-list">
+                <li>Manufacturing Concepts</li>
+                <li>Production Cost Statement</li>
+                <li>Break-even Analysis</li>
+                <li>Budgets (Cash Budget)</li>
+                <li>Budgets (Projected Income Statement)</li>
+                <li>Cost Accounting</li>
+                <li>Ethical Behaviour and Internal Control</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="geography">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('geography')">
+            <div class="subject-info">
+              <div class="subject-icon blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div>
+                <h3>Geography</h3>
+                <p>Climatology, Geomorphology and Mapwork</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Theory</h4>
+              <ul class="chapter-list">
+                <li>Climate and Weather (Mid-latitude Cyclones)</li>
+                <li>Climate and Weather (Tropical Cyclones)</li>
+                <li>Climate and Weather (Subtropical Anticyclones)</li>
+                <li>Geomorphology (Fluvial Processes)</li>
+                <li>Geomorphology (Drainage Basins)</li>
+                <li>Africa and Global Development</li>
+                <li>Resources and Sustainability</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Mapwork & GIS</h4>
+              <ul class="chapter-list">
+                <li>Map Calculations (Distance, Scale, Area)</li>
+                <li>Contour Lines and Cross-sections</li>
+                <li>Map Interpretation</li>
+                <li>Orthophoto Interpretation</li>
+                <li>Geographical Information Systems (GIS)</li>
+                <li>Synoptic Weather Maps</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="economics">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('economics')">
+            <div class="subject-info">
+              <div class="subject-icon purple">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </div>
+              <div>
+                <h3>Economics</h3>
+                <p>Macro and Micro-economics</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Macro-economics</h4>
+              <ul class="chapter-list">
+                <li>Circular Flow (Open Economy)</li>
+                <li>Business Cycles</li>
+                <li>Public Sector (Fiscal Policy)</li>
+                <li>Foreign Exchange Markets</li>
+                <li>Balance of Payments</li>
+                <li>Protectionism and Free Trade</li>
+                <li>Economic Growth and Development</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Micro-economics</h4>
+              <ul class="chapter-list">
+                <li>Perfect Markets</li>
+                <li>Imperfect Markets (Monopoly)</li>
+                <li>Imperfect Markets (Oligopoly)</li>
+                <li>Cost, Revenue and Profit</li>
+                <li>Market Failures</li>
+                <li>Labour Market (Demand and Supply)</li>
+                <li>Inequality and Poverty</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="business-studies">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('business-studies')">
+            <div class="subject-info">
+              <div class="subject-icon purple">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3>Business Studies</h3>
+                <p>Business operations, legislation and strategies</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Business Environments</h4>
+              <ul class="chapter-list">
+                <li>Macro Environment (Impact on Business)</li>
+                <li>Market Environment</li>
+                <li>Business Sectors (Primary, Secondary, Tertiary)</li>
+                <li>Contemporary Socio-economic Issues</li>
+                <li>Social Responsibility and Ethics</li>
+                <li>Legislation (BBBEE, Labour, Consumer Protection)</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Business Ventures</h4>
+              <ul class="chapter-list">
+                <li>Business Operations (Quality, Production)</li>
+                <li>Human Resources Function</li>
+                <li>Leadership and Management</li>
+                <li>Investment (Securities and Insurance)</li>
+                <li>Presentation and Data Response</li>
+                <li>Forms of Ownership</li>
+                <li>Team Dynamics and Conflict Management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-detailed-card" id="maths-literacy">
+          <div class="subject-card-header" onclick="toggleSubjectChapters('maths-literacy')">
+            <div class="subject-info">
+              <div class="subject-icon green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+              </div>
+              <div>
+                <h3>Mathematical Literacy</h3>
+                <p>Practical application of mathematical concepts</p>
+              </div>
+            </div>
+            <div class="expand-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="subject-chapters">
+            <div class="paper-section">
+              <h4>Paper 1: Finance, Data Handling & Probability</h4>
+              <ul class="chapter-list">
+                <li>Finance (Income, Expenditure, Budgets)</li>
+                <li>Finance (Interest, Banking, Taxation)</li>
+                <li>Finance (Exchange Rates)</li>
+                <li>Data Handling (Collecting and Organising)</li>
+                <li>Data Handling (Representing Data)</li>
+                <li>Probability and Predictions</li>
+              </ul>
+            </div>
+            <div class="paper-section">
+              <h4>Paper 2: Measurement, Maps & Space</h4>
+              <ul class="chapter-list">
+                <li>Conversions and Time</li>
+                <li>Measurement (Length, Mass, Volume)</li>
+                <li>Maps, Plans and Other Representations</li>
+                <li>Scale and Map Work</li>
+                <li>Measurement (Perimeter, Area, Volume)</li>
+                <li>Models and Plans</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to Excel in Your Studies?</h2>
+        <p>Join Smart Minds today and get access to comprehensive lessons for all your subjects.</p>
+        <a href="subscribe-confirmation.html" class="btn btn-primary btn-lg">Get Started Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <span class="logo-text">Smart Minds</span>
+          </a>
+          <p>Empowering Grade 12 learners with curriculum-aligned digital education. Master your matric results with us.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="live-schedules.html">Live Lessons</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><strong>Call/WhatsApp:</strong></li>
+            <li><a href="tel:+27816991450">+27 81 699 1450</a></li>
+            <li><strong>Email:</strong></li>
+            <li><a href="mailto:smartmindstutoring76@gmail.com">smartmindstutoring76@gmail.com</a></li>
+            <li><strong>Location:</strong></li>
+            <li>Pretoria, South Africa</li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Smart Minds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

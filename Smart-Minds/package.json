@@ -1,0 +1,16 @@
+{
+  "name": "smart-minds-tutoring",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["tutoring", "matric", "education", "south africa"],
+  "author": "Smart Minds Tutoring",
+  "license": "ISC",
+  "description": "Smart Minds - Digital Learning Platform for Matric",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzes - Smart Minds</title>
+  <meta name="description" content="Test your knowledge with our interactive quizzes for theory subjects. Multiple choice questions with instant feedback.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="top">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" onclick="scrollToTop(event)">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <span class="logo-text">Smart Minds</span>
+      </a>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html" onclick="scrollToTop(event)">Home</a></li>
+          <li><a href="subjects.html" onclick="scrollToTop(event)">Subjects</a></li>
+          <li><a href="pricing.html" onclick="scrollToTop(event)">Pricing</a></li>
+          <li><a href="live-schedules.html" onclick="scrollToTop(event)">Live Schedules</a></li>
+          <li><a href="quizzes.html" class="active" onclick="scrollToTop(event)">Quizzes</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="pricing.html" class="btn btn-primary">Get Started</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+    
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="index.html" onclick="scrollToTop(event)">Home</a></li>
+        <li><a href="subjects.html" onclick="scrollToTop(event)">Subjects</a></li>
+        <li><a href="pricing.html" onclick="scrollToTop(event)">Pricing</a></li>
+        <li><a href="live-schedules.html" onclick="scrollToTop(event)">Live Schedules</a></li>
+        <li><a href="quizzes.html" onclick="scrollToTop(event)">Quizzes</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="pricing.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Practice Quizzes</h1>
+      <p>Test your knowledge with our interactive multiple choice quizzes for theory subjects.</p>
+    </div>
+  </div>
+
+  <section class="quiz-section">
+    <div class="container">
+      <div id="quiz-selection">
+        <div class="section-header">
+          <h2>Choose a Subject</h2>
+          <p>Select a theory subject below to start practicing</p>
+        </div>
+        
+        <div class="quiz-grid">
+          <div class="quiz-card" onclick="startQuiz('life-sciences')">
+            <div class="quiz-card-icon green">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Life Sciences</h3>
+            <p>5 Questions</p>
+            <span class="quiz-btn">Start Quiz</span>
+          </div>
+          
+          <div class="quiz-card" onclick="startQuiz('economics')">
+            <div class="quiz-card-icon purple">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <h3>Economics</h3>
+            <p>5 Questions</p>
+            <span class="quiz-btn">Start Quiz</span>
+          </div>
+          
+          <div class="quiz-card" onclick="startQuiz('geography')">
+            <div class="quiz-card-icon blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3>Geography</h3>
+            <p>5 Questions</p>
+            <span class="quiz-btn">Start Quiz</span>
+          </div>
+          
+          <div class="quiz-card" onclick="startQuiz('business-studies')">
+            <div class="quiz-card-icon purple">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Business Studies</h3>
+            <p>5 Questions</p>
+            <span class="quiz-btn">Start Quiz</span>
+          </div>
+          
+          <div class="quiz-card" onclick="startQuiz('accounting')">
+            <div class="quiz-card-icon amber">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <h3>Accounting</h3>
+            <p>5 Questions</p>
+            <span class="quiz-btn">Start Quiz</span>
+          </div>
+        </div>
+      </div>
+      
+      <div id="quiz-container" style="display: none;">
+        <div class="quiz-header">
+          <button class="back-btn" onclick="backToQuizzes()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            Back to Quizzes
+          </button>
+          <h2 id="quiz-subject-title">Quiz</h2>
+          <p id="question-number">Question 1 of 5</p>
+        </div>
+        
+        <div class="quiz-question-card">
+          <h3 id="question-text">Question text here</h3>
+          <div id="options-container" class="quiz-options"></div>
+          <button id="next-btn" class="btn btn-primary" onclick="nextQuestion()" style="display: none;">Next Question</button>
+        </div>
+      </div>
+      
+      <div id="quiz-results" style="display: none;">
+        <div class="results-card">
+          <div class="results-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h2>Quiz Complete!</h2>
+          <div class="score-display">
+            <span id="final-score">0 / 5</span>
+            <span id="score-percentage">0%</span>
+          </div>
+          <p id="result-message">Great job!</p>
+          <div class="results-buttons">
+            <button class="btn btn-primary" onclick="restartQuiz()">Try Again</button>
+            <button class="btn btn-outline" onclick="backToQuizzes()">Choose Another Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <span class="logo-text">Smart Minds</span>
+          </a>
+          <p>Empowering Grade 12 learners with curriculum-aligned digital education. Master your matric results with us.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="live-schedules.html">Live Lessons</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><strong>Call/WhatsApp:</strong></li>
+            <li><a href="tel:+27816991450">+27 81 699 1450</a></li>
+            <li><strong>Email:</strong></li>
+            <li><a href="mailto:smartmindstutoring76@gmail.com">smartmindstutoring76@gmail.com</a></li>
+            <li><strong>Location:</strong></li>
+            <li>Pretoria, South Africa</li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Smart Minds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

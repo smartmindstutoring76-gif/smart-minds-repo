@@ -1,0 +1,214 @@
+🌟 SMART MINDS — OVERVIEW (PARAGRAPH FORM)
+
+Smart Minds is a digital learning platform designed for Grade 12 (matric) learners and those upgrading their results. It offers subject-specific learning for Physical Sciences, Mathematics, Life Sciences, Geography, Accounting, Economics, Business Studies, and Mathematical Literacy. The platform is structured exactly according to the matric curriculum, with every subject divided into Paper 1 and Paper 2, and each paper broken down into its correct chapters and topics. Students subscribe per subject at R250 per month, gaining access to live online lessons, chapter-based video lessons, theory quizzes, calculation practice questions, and a complete past-question-paper library. Smart Minds will also include recorded lessons, downloadable study notes, worksheets, and a personalized student dashboard that tracks progress. Teachers and administrators can upload lessons, schedule live sessions, create quizzes, upload past papers, and manage learners. The system is built to be expandable, mobile-friendly, and suitable for long-term growth.
+
+📌 SMART MINDS — FULL POINT-FORM STRUCTURE
+1. Purpose & Vision
+
+Improve matric marks for learners and upgraders
+
+Deliver curriculum-aligned, exam-ready content
+
+Make high-quality learning accessible at R250 per subject per month
+
+Support both theory and calculation-based subjects
+
+2. Subjects Offered
+
+Physical Sciences
+
+Mathematics
+
+Life Sciences
+
+Geography
+
+Accounting
+
+Economics
+
+Business Studies
+
+Mathematical Literacy
+
+3. Curriculum Structure
+
+Each subject includes:
+
+Paper 1 section
+
+Paper 2 section
+
+Chapters arranged exactly in CAPS/exam-board order
+
+Subtopics for each chapter
+
+Lesson summaries, notes & examples
+
+4. Learning Content
+
+Video lessons for each chapter
+
+Live online lessons hosted weekly
+
+Recorded lessons available anytime
+
+Notes and worksheets downloadable
+
+Worked examples for calculations
+
+Exam tips and high-level summaries
+
+5. Quizzes & Practice
+
+Theory quizzes (multiple choice, true/false, short answer)
+
+Calculation practice (numeric inputs, step-by-step methods)
+
+Auto-marking for MCQ and numeric questions
+
+Teacher-marked long questions
+
+Timed exam simulations
+
+Progress tracking (per chapter, per paper, per subject)
+
+6. Past Question Papers
+
+Past exam papers for all subjects
+
+Marking guidelines included
+
+Filter by:
+
+Year
+
+Subject
+
+Paper 1 / Paper 2
+
+Topic
+
+Downloadable PDF papers
+
+Practice mode with extracted questions per chapter
+
+7. Subscription Model
+
+R250 per month per subject
+
+Student can subscribe to 1 or multiple subjects
+
+Access includes:
+
+Live lessons
+
+Full chapter content
+
+Quizzes & practice
+
+Past papers collection
+
+Lesson recordings
+
+Option for reminder notifications
+
+8. Student Features
+
+Dashboard showing:
+
+Active subjects
+
+Next live lessons
+
+Recent quiz results
+
+Recommended chapters
+
+Ability to:
+
+Join live lessons
+
+Watch recordings
+
+Complete quizzes
+
+Download PDFs
+
+Track progress
+
+9. Teacher/Admin Features
+
+Upload chapter lessons
+
+Upload notes & worksheets
+
+Schedule live lessons
+
+Upload recorded lessons
+
+Create quizzes (theory + calculation)
+
+Upload and categorize past papers
+
+Mark long-answer questions
+
+Manage subscribers
+
+View student analytics
+
+10. Live Lessons System
+
+Weekly interactive lessons
+
+Subject-specific sessions
+
+Join link visible to paid subscribers only
+
+Recordings available afterward
+
+Calendar reminders for students
+
+11. Technical Structure (Concept Summary Only — No Code)
+
+Mobile-friendly site/app
+
+Database storing:
+
+Users
+
+Subjects
+
+Papers
+
+Chapters
+
+Lessons
+
+Quizzes
+
+Attempts
+
+Past papers
+
+Subscriptions
+
+Secure login system
+
+Protected content (only for paying students)
+
+Online payment integration for subscriptions
+
+12. Expansion Possibilities
+
+Group packages for schools
+
+Learner leaderboard & gamification
+
+WhatsApp or SMS reminders
+
+Offline downloads
+
+Native Android/iOS app
+
+Teachers marketplace
